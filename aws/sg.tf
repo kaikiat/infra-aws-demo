@@ -1,7 +1,7 @@
 resource "aws_security_group" "gt_alb_sg" {
   name        = "gt_alb_sg"
   description = "Allow web traffic to the load balancer"
-  vpc_id      = aws_vpc.vpc.id
+  vpc_id      = aws_vpc.gt_vpc.id
 
   ingress {
     from_port   = 80
@@ -25,7 +25,7 @@ resource "aws_security_group" "gt_alb_sg" {
 
 
 resource "aws_security_group" "gt_ec2_sg" {
-  name        = "gt_sg"
+  name        = "gt_ec2_sg"
   description = "EC2 Security Group"
   vpc_id      = aws_vpc.gt_vpc.id
 

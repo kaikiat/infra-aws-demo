@@ -1,5 +1,6 @@
+
 resource "aws_lb" "gt_lb" {
-  name               = "gt_lb"
+  name               = "gt-lb"
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.gt_alb_sg.id]
@@ -8,14 +9,13 @@ resource "aws_lb" "gt_lb" {
 
 
 resource "aws_lb_target_group" "gt_lb_tg" {
-  name        = "gt_lb_tg"
+  name        = "gt-lb-tg"
   port        = 80
   protocol    = "HTTP"
   target_type = "instance"
 
   deregistration_delay = 60
-
-  vpc_id = aws_vpc.gt_vpc.id
+  vpc_id               = aws_vpc.gt_vpc.id
 
   health_check {
     path     = "/"
