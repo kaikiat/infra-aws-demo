@@ -1,4 +1,5 @@
-sudo apt-get update
+sudo apt-get -y update
+sudo apt-get -y upgrade
 sudo apt-get install -y git
 sudo apt-get install -y python3-pip
 sudo apt-get install -y gunicorn
@@ -50,11 +51,5 @@ EOF
 # Not required
 # sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
 # For fun
-sudo nginx -t
+############## sudo nginx -t
 sudo systemctl reload nginx
-
-
-
-# https://medium.com/techfront/step-by-step-visual-guide-on-deploying-a-flask-application-on-aws-ec2-8e3e8b82c4f7
-# cat /var/log/cloud-init-output.log
-# cat /var/log/cloud-init.log

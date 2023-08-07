@@ -10,7 +10,7 @@ resource "aws_lb" "gt_lb" {
 
 resource "aws_lb_target_group" "gt_lb_tg" {
   name        = "gt-lb-tg"
-  port        = 5000
+  port        = 80
   protocol    = "HTTP"
   target_type = "instance"
 
@@ -27,13 +27,13 @@ resource "aws_lb_target_group" "gt_lb_tg" {
 resource "aws_lb_target_group_attachment" "gt_lb_tg_attachment_1" {
   target_group_arn = aws_lb_target_group.gt_lb_tg.arn
   target_id        = aws_instance.gt_ec2_1.id
-  port             = 5000
+  port             = 80
 }
 
 resource "aws_lb_target_group_attachment" "gt_lb_tg_attachment_2" {
   target_group_arn = aws_lb_target_group.gt_lb_tg.arn
   target_id        = aws_instance.gt_ec2_2.id
-  port             = 5000
+  port             = 80
 }
 
 resource "aws_lb_listener" "gt_lb_listerner" {
