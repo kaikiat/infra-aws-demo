@@ -2,7 +2,7 @@ resource "aws_instance" "gt_ec2_1" {
   ami           = "ami-0df7a207adb9748c7"
   instance_type = "t2.micro"
 
-  key_name               = "infra_aws_demo"
+  key_name               = "infra_aws_demo_1"
   subnet_id              = aws_subnet.gt_subnet_1.id
   vpc_security_group_ids = [aws_security_group.gt_ec2_sg.id]
 
@@ -18,7 +18,7 @@ resource "aws_instance" "gt_ec2_2" {
   ami           = "ami-0df7a207adb9748c7"
   instance_type = "t2.micro"
 
-  key_name               = "infra_aws_demo"
+  key_name               = "infra_aws_demo_2"
   subnet_id              = aws_subnet.gt_subnet_2.id
   vpc_security_group_ids = [aws_security_group.gt_ec2_sg.id]
 
