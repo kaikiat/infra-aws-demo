@@ -8,7 +8,7 @@ def hello_world():
 
 
 @app.route('/healthz')
-def hello_world():
+def get_healthz():
 	return 'Ok'
 
 if __name__ == '__main__':

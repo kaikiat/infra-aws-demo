@@ -1,5 +1,8 @@
 sudo apt-get update
 sudo apt-get install git
+sudo apt-get install python3-pip
+sudo apt install python3-flask
+
 git config --global user.name "kaikiat"
 git config --global user.email "pohkaikiat98@gmail.com"
 
