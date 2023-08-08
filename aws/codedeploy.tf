@@ -16,13 +16,13 @@ resource "aws_codedeploy_deployment_group" "gt_codedeploy_deployment_group" {
     }
   }
 
-  ec2_tag_set {
-    ec2_tag_filter {
-      key   = "Name"
-      value = "Instance-2"
-      type  = "KEY_AND_VALUE"
-    }
-  }
+  # ec2_tag_set {
+  #   ec2_tag_filter {
+  #     key   = "Name"
+  #     value = "Instance-2"
+  #     type  = "KEY_AND_VALUE"
+  #   }
+  # }
 
   deployment_style {
     deployment_option = "WITHOUT_TRAFFIC_CONTROL"
