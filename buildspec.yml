@@ -1,17 +1,5 @@
-version: 0.0
-os: linux
-files:
-  - source: /scripts
-    destination: /home/ubuntu/
-  - source: /setup
-    destination: /home/ubuntu/setup
-hooks:
-  BeforeInstall:
-    - location: scripts/start_server.sh
-      timeout: 200
-      runas: root
-  ApplicationStop:
-    - location: scripts/cleanup.sh
-      timeout: 200
-      runas: root
-      
+version: 0.2
+
+artifacts:
+  files:
+    - appspec.yml
