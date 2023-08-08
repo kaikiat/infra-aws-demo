@@ -52,10 +52,10 @@ jobs:
     - name: AWS Code Deploy
       run: |
         aws deploy register-application-revision --application-name GTApplication \
-        --s3-location bucket=tsc-code-deploy-bucket,key=${{ env.FILENAME }},bundleType=zip
+        --s3-location bucket=gt-code-deploy-bucket,key=${{ env.FILENAME }},bundleType=zip
     
         aws deploy create-deployment --application-name GTApplication \
             --deployment-config-name CodeDeployDefault.OneAtATime \
             --deployment-group-name production \
-            --s3-location bucket=tsc-code-deploy-bucket,key=${{ env.FILENAME }},bundleType=zip \
+            --s3-location bucket=gt-code-deploy-bucket,key=${{ env.FILENAME }},bundleType=zip \
             --ignore-application-stop-failures
