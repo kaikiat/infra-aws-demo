@@ -1,13 +1,12 @@
-from flask import request
+import socket
 from flask import Flask
 
 app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-	hostname = request.headers.get('Host')
-	return f'{str(hostname)}'
-
+	instance_id = socket.gethostname()
+	return f'Hello from instance: {instance_id}\n'
 
 @app.route('/healthz')
 def get_healthz():
