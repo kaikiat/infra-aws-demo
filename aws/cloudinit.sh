@@ -1,15 +1,13 @@
+#!/bin/bash
+echo "Hello World"
 sudo apt-get -y update
-sudo apt-get -y upgrade
-sudo apt-get install -y git
-sudo apt-get install -y python3-pip
-sudo apt-get install -y gunicorn
-sudo apt install -y python3-flask
+touch hello12.txt
+sudo apt-get install -qq -y python3-pip python3-flask nginx
 
 git config --global user.name "kaikiat"
 git config --global user.email "pohkaikiat98@gmail.com"
 
-cd $HOME
-touch hello12.txt
+cd /home/ubuntu
 git clone https://github.com/kaikiat/infra-aws-demo.git
 cd infra-aws-demo/server
 python3 -m pip install -r requirements.txt
@@ -34,7 +32,6 @@ sudo systemctl daemon-reload
 sudo systemctl start server
 sudo systemctl enable server
 
-sudo apt install -y nginx
 sudo systemctl start nginx
 sudo systemctl enable nginx
 
@@ -51,5 +48,6 @@ EOF
 # Not required
 # sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
 # For fun
+# /var/log/cloud-init-output.log
 ############## sudo nginx -t
 sudo systemctl reload nginx

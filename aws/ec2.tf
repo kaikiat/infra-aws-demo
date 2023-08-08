@@ -1,5 +1,5 @@
 resource "aws_instance" "gt_ec2_1" {
-  ami           = "ami-0df7a207adb9748c7"
+  ami           = "ami-002843b0a9e09324a"
   instance_type = "t2.micro"
 
   key_name               = "infra_aws_demo_1"
@@ -15,7 +15,7 @@ resource "aws_instance" "gt_ec2_1" {
 
 
 resource "aws_instance" "gt_ec2_2" {
-  ami           = "ami-0df7a207adb9748c7"
+  ami           = "ami-002843b0a9e09324a"
   instance_type = "t2.micro"
 
   key_name               = "infra_aws_demo_2"
