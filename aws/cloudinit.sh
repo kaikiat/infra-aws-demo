@@ -2,7 +2,7 @@
 echo "Hello World"
 sudo apt-get -y update
 touch hello12.txt
-sudo apt-get install -qq -y python3-pip python3-flask nginx
+sudo apt-get install -qq -y python3-pip python3-flask nginx wget
 
 git config --global user.name "kaikiat"
 git config --global user.email "pohkaikiat98@gmail.com"
@@ -51,3 +51,9 @@ EOF
 # /var/log/cloud-init-output.log
 ############## sudo nginx -t
 sudo systemctl reload nginx
+
+cd /home/ubuntu
+wget https://aws-codedeploy-ap-southeast-1.s3.ap-southeast-1.amazonaws.com/latest/install
+chmod +x ./install
+sudo ./install auto > /tmp/logfile
+sudo service codedeploy-agent start
