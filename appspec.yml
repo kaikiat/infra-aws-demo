@@ -3,8 +3,6 @@ os: linux
 files:
   - source: /scripts
     destination: /home/ubuntu/
-  - source: /setup
-    destination: /home/ubuntu/setup
 hooks:
   BeforeInstall:
     - location: scripts/start_server.sh
