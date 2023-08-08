@@ -56,4 +56,3 @@ sudo service codedeploy-agent start
 
 # /var/log/cloud-init-output.log
 # sudo service codedeploy-agent status
-# /opt/codedeploy-agent/deployment-root/deployment-logs/codedeploy-agent-deployments.log

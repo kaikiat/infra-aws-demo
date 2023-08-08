@@ -10,5 +10,7 @@ git pull
 cd server
 python3 -m pip install -r requirements.txt
 
-sudo systemctl reload server
+sudo systemctl restart server
 sudo systemctl reload nginx
+
+# /opt/codedeploy-agent/deployment-root/deployment-logs/codedeploy-agent-deployments.log
