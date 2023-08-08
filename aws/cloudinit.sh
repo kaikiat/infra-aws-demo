@@ -45,10 +45,6 @@ server {
     }
 }
 EOF
-# Not required
-# sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
-# For fun
-# /var/log/cloud-init-output.log
 ############## sudo nginx -t
 sudo systemctl reload nginx
 
@@ -57,3 +53,5 @@ wget https://aws-codedeploy-ap-southeast-1.s3.ap-southeast-1.amazonaws.com/lates
 chmod +x ./install
 sudo ./install auto > /tmp/logfile
 sudo service codedeploy-agent start
+
+# /var/log/cloud-init-output.log
