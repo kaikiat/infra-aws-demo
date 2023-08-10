@@ -41,8 +41,20 @@ resource "aws_lb_listener" "gt_lb_listerner" {
   port              = 80
   protocol          = "HTTP"
 
+  # default_action {
+  #   type             = "forward"
+  #   target_group_arn = aws_lb_target_group.gt_lb_tg.arn
+  # }
   default_action {
-    type             = "forward"
-    target_group_arn = aws_lb_target_group.gt_lb_tg.arn
+    type = "redirect"
+
+    redirect {
+      host        = "gtawsinfrademo.net"
+      port        = "443"
+      protocol    = "HTTPS"
+      path        = "/"
+      query       = ""
+      status_code = "HTTP_301"
+    }
   }
 }
