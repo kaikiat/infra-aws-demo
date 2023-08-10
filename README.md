@@ -1,2 +1,2 @@
-1. Gslides [gtawsinfrademo.net](gtawsinfrademo.net)
+1. Gslides [https://docs.google.com/presentation/d/1Bg3GxpzymEPsTnHAb6VeXb62gas4wSTE1bTawzVFs-Y/edit?usp=sharing](https://docs.google.com/presentation/d/1Bg3GxpzymEPsTnHAb6VeXb62gas4wSTE1bTawzVFs-Y/edit?usp=sharing)
 2. App url: [https://gtawsinfrademo.net/](https://gtawsinfrademo.net/)
