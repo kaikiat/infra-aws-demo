@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
 	instance_id = socket.gethostname()
-	return f'Hi from instance : {instance_id}\n'
+	return f'Hello from instance : {instance_id}\n'
 
 @app.route('/healthz')
 def get_healthz():
